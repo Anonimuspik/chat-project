@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Chat</title>
-</head>
-<body>
-  <h2>Мой чат</h2>
+<style>
+  body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
 
-  <input id="name" placeholder="Имя"><br><br>
-  <input id="msg" placeholder="Сообщение">
-  <button onclick="send()">Отправить</button>
+  input {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 8px;
+    margin: 4px 0;
+  }
 
-  <ul id="chat"></ul>
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
 
-  <script>
-    function send() {
-      const name = document.getElementById("name").value;
-      const msg = document.getElementById("msg").value;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-      const li = document.createElement("li");
-      li.textContent = name + ": " + msg;
-
-      document.getElementById("chat").appendChild(li);
-      document.getElementById("msg").value = "";
-    }
-  </script>
-</body>
-</html>
+  li {
+    padding: 4px 0;
+  }
+</style>
